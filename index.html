@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather Forecast</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-1"></div>
+        <div class="jumbotron col-10 transparent fonts text-center">
+          <h1>Weather Forecast</h1>
+          <br>
+          <p>Welcome to weather forecast.</p>
+          <p> To begin enter your desired departure and destination location and press Enter or Search button.</p>
+          <p> You can enter either coordinates or name of the city/adress.</p>
+        </div>
+        <div class="col-1"></div>
+      </div>
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="text-center col-12 col-md-5 col-sm-6">
+            <input type="text" id="input-departure" placeholder="Departure: " class="form-control margin">
+            <br>
+        </div>
+        <div class="text-center col-12 col-md-5 col-sm-6">
+            <input type="text" id="input-destination" placeholder="Destination: " class="form-control">
+            <br>
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+      <div class="text-center">
+        <button type="button" id="button" class='btn btn-light m-1'>Search</button>
+      </div>
+      <br>
+      <div class="loader"></div>
+      <div class="row fonts">
+          <div class="col-md-1"></div>
+          <div class="departure col-12 col-md-5 col-sm-6">
+            <div class="information d-flex flex-column margin p-3 rounded">
+              <div class="d-inline-flex" id="departure-name"></div>
+              <br>
+              <div class="d-inline-flex dew-point"> <b>Dew Point: </b></div>
+              <div class="d-inline-flex humidity"> <b>Humidity: </b></div>
+              <div class="d-inline-flex temperature"> <b>Temperature: </b></div>
+            </div>
+            <div class="d-flex justify-content-center mt-1 height">
+              <div class="grid d-inline-block flex-even position-relative">
+                <img src="images/sun.png" alt="" class="sun medium">
+                <p class='fog'></p>
+              </div>
+              <div class="grid d-inline-block flex-even position-relative">
+                <img src="images/cloud.png" alt="" class="icons low lcloud">
+                <p class='low-clouds'></p>
+              </div>
+              <div class="grid d-inline-block flex-even position-relative">
+                <img src="images/cloud.png" alt="" class="icons medium mcloud">
+                <p class='medium-clouds'></p>
+              </div>
+              <div class="grid d-inline-block flex-even position-relative">
+                <img src="images/cloud.png" alt="" class="icons high hcloud">
+                <p class='high-clouds'></p>
+              </div>
+            </div>
+            <br>
+            <div class="tempByHour">
+            </div>
+            <br><br>
+            <div class="tempWeek">
+
+            </div>
+          </div>
+          <div class="destination col-12 col-md-5 col-sm-6">
+            <div class="information d-flex flex-column margin p-3 rounded">
+              <div class="d-inline-flex" id="destination-name"></div>
+              <br>
+              <div class="d-inline-flex dew-point"> <b>Dew Point: </b></div>
+              <div class="d-inline-flex humidity"> <b>Humidity: </b></div>
+              <div class="d-inline-flex temperature"> <b>Temperature: </b></div>
+            </div>
+            <div class="d-flex justify-content-center mt-1 height">
+              <div class="grid d-inline-block flex-even position-relative">
+                <img src="images/sun.png" alt="" class="sun medium">
+                <p class='fog'></p>
+              </div>
+              <div class="grid d-inline-block flex-even position-relative">
+                <img src="images/cloud.png" alt="" class="icons low lcloud">
+                <p class='low-clouds'></p>
+              </div>
+              <div class="grid d-inline-block flex-even position-relative">
+                <img src="images/cloud.png" alt="" class="icons medium mcloud">
+                <p class='medium-clouds'></p>
+              </div>
+              <div class="grid d-inline-block flex-even position-relative">
+                <img src="images/cloud.png" alt="" class="icons high hcloud">
+                <p class='high-clouds'></p>
+              </div>
+            </div>
+            <br>
+            <div class="tempByHour">
+            </div>
+            <br><br>
+            <div class="tempWeek">
+
+            </div>
+          </div>
+          <div class="col-md-1"></div>
+        </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
